@@ -1,0 +1,47 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: colorsapp
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: color
+    spec:
+      containers:
+      - name: colorsapp
+        image: quay.io/cicone/color:latest
+        imagePullPolicy: Always
+        ports:
+        - name: apache2
+          containerPort: 80
+        resources:
+          requests:
+            cpu: 200m
+#        volumeMounts:
+#        - mountPath: /usr/local/
+#          name: data
+#      volumes:
+#      - name: data
+#        emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: colors
+  namespace: default
+  labels:
+    name: color
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+#  clusterIP: None
+  type: NodePort
+  selector:
+    name: color

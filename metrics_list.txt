@@ -1,0 +1,76 @@
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="2",minor="7",patchlevel="16",version="2.7.16"} 1.0
+# HELP app_info  Coverts HEX color representation to RGB
+# TYPE app_info gauge
+app_info{version="0.1"} 1.0
+# HELP flask_http_request_duration_seconds Flask HTTP request duration in seconds
+# TYPE flask_http_request_duration_seconds histogram
+flask_http_request_duration_seconds_bucket{le="0.005",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.01",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.025",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.05",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.075",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.1",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.25",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.5",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="0.75",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="1.0",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="2.5",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="5.0",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="7.5",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="10.0",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_bucket{le="+Inf",method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_count{method="POST",path="/",status="400"} 8.0
+flask_http_request_duration_seconds_sum{method="POST",path="/",status="400"} 0.002480030059814453
+flask_http_request_duration_seconds_bucket{le="0.005",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.01",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.025",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.05",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.075",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.1",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.25",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.5",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="0.75",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="1.0",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="2.5",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="5.0",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="7.5",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="10.0",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_bucket{le="+Inf",method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_count{method="POST",path="/",status="200"} 39.0
+flask_http_request_duration_seconds_sum{method="POST",path="/",status="200"} 0.009559392929077148
+# TYPE flask_http_request_duration_seconds_created gauge
+flask_http_request_duration_seconds_created{method="POST",path="/",status="400"} 1.567155266896084e+09
+flask_http_request_duration_seconds_created{method="POST",path="/",status="200"} 1.567155266739397e+09
+# HELP flask_exporter_info Information about the Prometheus Flask exporter
+# TYPE flask_exporter_info gauge
+flask_exporter_info{version="0.9.1"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 2.9114368e+07
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.312192e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.56715513907e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 0.18
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 13.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048576e+06
+# HELP in_progress Long running requests in progress
+# TYPE in_progress gauge
+in_progress 0.0
+# HELP flask_http_request_total Total number of HTTP requests
+# TYPE flask_http_request_total counter
+flask_http_request_total{method="POST",status="400"} 8.0
+flask_http_request_total{method="POST",status="200"} 39.0
+# TYPE flask_http_request_created gauge
+flask_http_request_created{method="POST",status="400"} 1.567155266896176e+09
+flask_http_request_created{method="POST",status="200"} 1.567155266739471e+09
